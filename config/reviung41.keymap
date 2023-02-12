@@ -54,7 +54,7 @@
    &kp TAB    AS(Q) AS(W) AS(E) AS(R)     AS(T)    AS(Y)      AS(U)     AS(I)     AS(O)   AS(P)    AS(KP_MINUS)
    CTR_ESC    AS(A) AS(S) AS(D) AS(F)     AS(G)    AS(H)      AS(J)     AS(K)     AS(L)   AS(SEMI) AS(SQT)
    L_SHFT_PAR AS(Z) AS(X) AS(C) AS(V)     AS(B)    AS(N)      AS(M)     AS(COMMA) AS(DOT) AS(FSLH) R_SHFT_PAR
-                                &kp LCMD  &mo 1    SPC_RET    RSE_BSPC  &kp RGALT
+                                &kp LCMD  &mo 1    &mt RET SPACE    &lt 2 BSPC  &kp RGALT
                         >;
                 };
 
