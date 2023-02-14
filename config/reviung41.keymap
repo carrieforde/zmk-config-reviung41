@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020 The ZMK Contributors
+ * Copyright (c 2020 The ZMK Contributors
  *
  * SPDX-License-Identifier: MIT
  */
@@ -21,44 +21,44 @@
 #define RS_BSPC &lt RAISE BSPC
 
 &mt {
-        tapping_term_ms = <150>;
+	tapping_term_ms = <150>;
 };
 
 / {
         behaviors {
-                as: auto_shift {
-                        compatible = "zmk,behavior-hold-tap";
-                        label = "AUTO_SHIFT";
-                        #binding-cells = <2>;
-                        tapping_term_ms = <175>;
-                        quick_tap_ms = <0>;
-                        flavor = "tap-preferred";
-                        bindings = <&kp>, <&kp>;
-                };
-        };
+		as: auto_shift {
+			compatible = "zmk,behavior-hold-tap";
+			label = "AUTO_SHIFT";
+			#binding-cells = <2>;
+			tapping_term_ms = <175>;
+			quick_tap_ms = <0>;
+			flavor = "tap-preferred";
+			bindings = <&kp>, <&kp>;
+		};
+	};
 
         keymap {
                 compatible = "zmk,keymap";
 
                 default_layer {
 // -------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |   -    |
+// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |   -       |
 // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |    '      |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | SHFT(RET) |
+// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | SHFT(RET |
 //                         | ALT | LWR | SPC | RSE  | ALT |
                         bindings = <
-  &kp TAB    AS(Q) AS(W) AS(E) AS(R)     AS(T)             AS(Y) AS(U)  AS(I)     AS(O)   AS(P)    AS(MINUS)
-  CTR_ESC    AS(A) AS(S) AS(D) AS(F)     AS(G)             AS(H) AS(J)  AS(K)     AS(L)   AS(SEMI) AS(SQT)
-  L_SHFT_PAR AS(Z) AS(X) AS(C) AS(V)     AS(B)             AS(N) AS(M)  AS(COMMA) AS(DOT) AS(FSLH) R_SHFT_PAR
+  &kp TAB    &kp Q &kp W &kp E &kp R     &kp T             &kp Y    &kp U  &kp I     &kp O   &kp P    &kp MINUS
+  CTR_ESC    &kp A &kp S &kp D &kp F     &kp G             &kp H    &kp J  &kp K     &kp L   &kp SEMI &kp SQT
+  L_SHFT_PAR &kp Z &kp X &kp C &kp V     &kp B             &kp N    &kp M  &kp COMMA &kp DOT &kp FSLH R_SHFT_PAR
                                &kp LCMD  &mo 1   RET_SPC   RS_BSPC  &kp RALT
                         >;
                 };
 
                 lower_layer {
 // ------------------------------------------------------------------------------------
-// |    |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |      DEL    |
+// |    |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |    |      DEL    |
 // |    |  _  |  +  |  {  |  }  | "|" |   | LFT | DWN |  UP | RGT |  `  |       ~     |
-// |    | ESC | GUI | ALT | CAPS|  "  |   | HOME| END | PGUP| PGDN| PRSC| SHFT(SPACE) |
+// |    | ESC | GUI | ALT | CAPS|  "  |   | HOME| END | PGUP| PGDN| PRSC| SHFT(SPACE |
 //                       |     |     | RET | ADJ |     |
                         bindings = <
    &trans &kp EXCL  &kp AT      &kp HASH &kp DLLR &kp PRCNT      &kp CARET &kp AMPS &kp ASTRK &kp LPAR  &kp RPAR  &kp DEL
